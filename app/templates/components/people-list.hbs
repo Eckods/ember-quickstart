@@ -1,0 +1,11 @@
+<h2>{{title}}</h2>
+
+
+<ul>
+  {{!-- Loops through an array of data given by the model fnctn in people-list.js and prints--}}
+  {{#each people as |person|}}
+    <li>{{person}}</li>
+    {{!-- When the li elem is click, a showperson function is called from an actions obj in component people-list--}}
+    <li {{action "showPerson" person}}>{{person}}</li>
+  {{/each}}
+</ul>
